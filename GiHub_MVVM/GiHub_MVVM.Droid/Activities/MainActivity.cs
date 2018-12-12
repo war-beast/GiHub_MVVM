@@ -17,7 +17,7 @@ namespace GiHub_MVVM.Droid.Activities
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop
     )]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>, INavigationActivity
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>, INavigationActivity
     {
         public DrawerLayout Drawer { get; set; }
 
@@ -28,30 +28,19 @@ namespace GiHub_MVVM.Droid.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-#if DEBUG
-            CrashManager.Register(this, Constants.HockeyAppAndroidDebug);
-            MetricsManager.Register(Application, Constants.HockeyAppAndroidDebug);
-            CheckForUpdates();
-#else
-            CrashManager.Register(this, Constants.HockeyAppAndroidProd);
-            MetricsManager.Register(Application, Constants.HockeyAppAndroidProd);
-#endif
+//#if DEBUG
+//            CrashManager.Register(this, Constants.HockeyAppAndroidDebug);
+//            MetricsManager.Register(Application, Constants.HockeyAppAndroidDebug);
+//            CheckForUpdates();
+//#else
+//            CrashManager.Register(this, Constants.HockeyAppAndroidProd);
+//            MetricsManager.Register(Application, Constants.HockeyAppAndroidProd);
+//#endif
 
             Drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             if (savedInstanceState == null)
                 ViewModel.ShowMenu();
-        }
-
-        public override void OnBeforeFragmentChanging(MvvmCross.Droid.Shared.Caching.IMvxCachedFragmentInfo fragmentInfo, Android.Support.V4.App.FragmentTransaction transaction)
-        {
-            transaction.SetCustomAnimations(
-                Resource.Animation.abc_fade_in,
-                Resource.Animation.abc_fade_out,
-                Resource.Animation.abc_fade_in,
-                Resource.Animation.abc_fade_out);
-
-            base.OnBeforeFragmentChanging(fragmentInfo, transaction);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -73,27 +62,27 @@ namespace GiHub_MVVM.Droid.Activities
                 Finish();
         }
 
-        private void CheckForUpdates()
-        {
-            // Remove this for store builds!
-            UpdateManager.Register(this, Constants.HockeyAppAndroidDebug);
-        }
+        //private void CheckForUpdates()
+        //{
+        //    // Remove this for store builds!
+        //    UpdateManager.Register(this, Constants.HockeyAppAndroidDebug);
+        //}
 
-        private void UnregisterManagers()
-        {
-            UpdateManager.Unregister();
-        }
+        //private void UnregisterManagers()
+        //{
+        //    UpdateManager.Unregister();
+        //}
 
         protected override void OnPause()
         {
             base.OnPause();
-            UnregisterManagers();
+            //UnregisterManagers();
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            UnregisterManagers();
+            //UnregisterManagers();
         }
     }
 

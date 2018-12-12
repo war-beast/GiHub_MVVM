@@ -4,7 +4,6 @@ using Android.Content;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
-using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
@@ -13,7 +12,7 @@ using MvvmCross.Platform.Platform;
 
 namespace GiHub_MVVM.Droid
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAppCompatSetup
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
@@ -31,9 +30,7 @@ namespace GiHub_MVVM.Droid
 
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
-            Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
-            return mvxFragmentsPresenter;
+            return new MvxAppCompatViewPresenter(AndroidViewAssemblies);
         }
 
         protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)

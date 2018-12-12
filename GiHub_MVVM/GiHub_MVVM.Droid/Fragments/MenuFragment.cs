@@ -6,37 +6,49 @@ using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Views;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Binding.Droid.BindingContext;
 
 namespace GiHub_MVVM.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.navigation_frame, false)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame)]
+    [Register("gihub_mvvm.droid.fragments.MenuFragment")]
     public class MenuFragment : BaseFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override int FragmentId => Resource.Layout.fragment_menu;
+
         private NavigationView navigationView;
         private IMenuItem previousMenuItem;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var view = base.OnCreateView(inflater, container, savedInstanceState);
+            var ignore = base.OnCreateView(inflater, container, savedInstanceState);
+            var view = this.BindingInflate(Resource.Layout.fragment_menu, null);
 
             navigationView = view.FindViewById<NavigationView>(Resource.Id.navigation_view);
             navigationView.SetNavigationItemSelectedListener(this);
+            navigationView.Menu.FindItem(Resource.Id.nav_home).SetChecked(true);
 
             return view;
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
-            Navigate(item.ItemId);
+            item.SetCheckable(true);
+            item.SetChecked(true);
+            previousMenuItem?.SetChecked(false);
+            previousMenuItem = item;
+
+            Task.Run(async () => {
+                await Navigate(item.ItemId);
+            });
 
             return true;
         }
 
         private async Task Navigate(int itemId)
         {
-            (ParentActivity as INavigationActivity).Drawer.CloseDrawers();
+            ((MainActivity)Activity).Drawer.CloseDrawers();
             await Task.Delay(TimeSpan.FromMilliseconds(250));
 
             switch (itemId)

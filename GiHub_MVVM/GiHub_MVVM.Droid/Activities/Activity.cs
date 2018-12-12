@@ -16,7 +16,7 @@ namespace GiHub_MVVM.Droid.Activities
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop
     )]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>, INavigationActivity
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>, INavigationActivity
     {
         public DrawerLayout Drawer { get; set; }
 

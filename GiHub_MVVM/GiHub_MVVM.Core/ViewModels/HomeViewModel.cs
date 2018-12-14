@@ -12,10 +12,7 @@ namespace GiHub_MVVM.Core.ViewModels
     {
         public HomeViewModel()
         {
-            var reader = new GitApiReader();
-            Items = Task.Run(async () => {
-                return await reader.GetRepositories();
-            }).Result;
+            
         }
 
         private MvxCommand closeViewCommand;

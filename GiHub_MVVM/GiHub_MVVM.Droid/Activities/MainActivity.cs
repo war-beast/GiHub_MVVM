@@ -54,6 +54,15 @@ namespace GiHub_MVVM.Droid.Activities
             return base.OnOptionsItemSelected(item);
         }
 
+        private void ShowHamburguerMenu()
+        {
+            //TODO set toggle indicator as enabled 
+            //this.DrawerToggle.DrawerIndicatorEnabled = true;
+
+            //Unlock the menu sliding gesture
+            Drawer.SetDrawerLockMode(DrawerLayout.LockModeUnlocked);
+        }
+
         public override void OnBackPressed()
         {
             if (Drawer != null && Drawer.IsDrawerOpen(GravityCompat.Start))

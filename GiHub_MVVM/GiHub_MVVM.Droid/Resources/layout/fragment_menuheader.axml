@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/margin_medium"
         android:scaleType="fitStart"
-        android:src="@drawable/icon"
+        android:src="@mipmap/ic_launcher"
         android:layout_marginBottom="@dimen/margin_medium" />
     <TextView
         android:layout_alignParentBottom="true"

@@ -55,10 +55,10 @@
 					android:layout_weight="5"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content">
-					<ImageView
+					<MyImageView
 						android:layout_width="match_parent"
 						android:layout_height="70dp"
-						android:src="@drawable/octocit"
+						local:MvxBind="Source Owner.AvatarUrl"
 						android:scaleType="centerInside" />
 				</LinearLayout>
 			</LinearLayout>

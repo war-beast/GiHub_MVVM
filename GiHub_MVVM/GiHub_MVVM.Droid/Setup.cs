@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Android.Content;
+using GiHub_MVVM.Droid.CustomBindings;
+using GiHub_MVVM.Droid.CustomViews;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
@@ -48,6 +50,9 @@ namespace GiHub_MVVM.Droid
         {
             MvxAppCompatSetupHelper.FillTargetFactories(registry);
             base.FillTargetFactories(registry);
+
+            //registry.RegisterPropertyInfoBindingFactory(
+            //    typeof(ImageUrlBinding), typeof(MyImageView), "Source");
         }
     }
 }

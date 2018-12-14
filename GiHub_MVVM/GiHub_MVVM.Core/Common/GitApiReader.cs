@@ -25,13 +25,12 @@ namespace GiHub_MVVM.Core.Common
         {
             var retList = new List<GitRepository>();
             string apiData = "";
-            string url = repoListUrl + repoItemsCount.ToString();
 
             try
             {
                 var client = new RestClient { BaseUrl = repoListUrl, UserAgent = "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36 OPR/56.0.3051.104" };
-                var req = new RestRequest(repoItemsCount.ToString(), HttpMethod.Get);
-                var result = await client.SendAsync<string>(req);
+                var request = new RestRequest(repoItemsCount.ToString(), HttpMethod.Get);
+                var result = await client.SendAsync<string>(request);
                 apiData = result.Content;
             }
             catch (Exception ex)
@@ -39,8 +38,11 @@ namespace GiHub_MVVM.Core.Common
                 string msg = ex.Message;
             }
 
-            var list = JsonConvert.DeserializeObject<List<GitRepository>>(apiData).Take(repoItemsCount);
-            retList.AddRange(list);
+            if (!String.IsNullOrWhiteSpace(apiData))
+            {
+                var list = JsonConvert.DeserializeObject<List<GitRepository>>(apiData).Take(repoItemsCount);
+                retList.AddRange(list);
+            }
 
             return retList;
         }
@@ -50,30 +52,20 @@ namespace GiHub_MVVM.Core.Common
             GitRepoSummary retVal = null;
             string apiData = "";
 
-            using (HttpClient web = new HttpClient())
+            try
             {
-                string url = repoSummaryUrl + full_name;
-                try
-                {
-                    HttpRequestMessage request = new HttpRequestMessage();
-                    request.RequestUri = new Uri(url);
-                    request.Method = HttpMethod.Get;
-                    request.Headers.Add("Accept", "application/json");
-                    request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36 OPR/56.0.3051.104");
-
-                    HttpResponseMessage response = await web.SendAsync(request);
-                    if (response.StatusCode == HttpStatusCode.OK)
-                    {
-                        HttpContent responseContent = response.Content;
-                        apiData = await responseContent.ReadAsStringAsync();
-                        retVal = JsonConvert.DeserializeObject<GitRepoSummary>(apiData);
-                    }
-                }
-                catch (Exception)
-                {
-                    apiData = "{}";
-                }
+                var client = new RestClient { BaseUrl = repoSummaryUrl, UserAgent = "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36 OPR/56.0.3051.104" };
+                var request = new RestRequest(full_name, HttpMethod.Get);
+                var result = await client.SendAsync<string>(request);
+                apiData = result.Content;
             }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+            }
+
+            if(!String.IsNullOrWhiteSpace(apiData))
+                retVal = JsonConvert.DeserializeObject<GitRepoSummary>(apiData);
 
             return retVal;
         }

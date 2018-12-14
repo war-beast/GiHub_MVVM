@@ -181,6 +181,8 @@
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="CustomBindings\ImageUrlBinding.cs" />
+    <Compile Include="CustomViews\MyImageView.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Fragments\MenuFragment.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />

@@ -50,9 +50,6 @@ namespace GiHub_MVVM.Droid
         {
             MvxAppCompatSetupHelper.FillTargetFactories(registry);
             base.FillTargetFactories(registry);
-
-            //registry.RegisterPropertyInfoBindingFactory(
-            //    typeof(ImageUrlBinding), typeof(MyImageView), "Source");
         }
     }
 }

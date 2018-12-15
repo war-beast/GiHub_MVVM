@@ -5,6 +5,7 @@
     <string name="drawer_close">Close navigation drawer</string>
 
   <string name="app_name">Тест API GitHub</string>
+  <string name="summary_title">Сведения</string>
   <string name="nav_home">Главная</string>
   <string name="nav_settings">Настройки</string>
   <string name="nav_exit">Выход</string>

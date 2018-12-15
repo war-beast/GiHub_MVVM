@@ -40,7 +40,6 @@
     <Compile Include="App.cs" />
     <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Common\GitApiReader.cs" />
-    <Compile Include="Common\ImageLoader.cs" />
     <Compile Include="Models\GitRepoInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -50,6 +49,8 @@
     <Compile Include="AppStart.cs" />
     <Compile Include="Helpers\TextProviderBuilder.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\SummaryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar_layout" />
+	<ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_margin="4dp">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:weightSum="10">
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_weight="5"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:text="@string/repo_name"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Item.Name"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+					<TextView
+						android:layout_marginTop="10dp"
+						android:text="@string/repo_owner"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						local:MvxBind="Text Item.Owner.Login"
+						android:textColor="@color/colorAccent"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_weight="5"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<Mvx.MvxImageView
+						android:layout_width="match_parent"
+						android:layout_height="70dp"
+						android:layout_alignParentRight="true"
+						local:MvxBind="ImageUrl Item.Owner.AvatarUrl"
+						android:scaleType="centerInside" />
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<TextView
+					android:text="@string/repo_short_description"
+					android:textColor="@color/colorPrimary"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content" />
+				<TextView
+					android:textColor="@color/colorAccent"
+					local:MvxBind="Text Item.Description"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"/>
+				<TextView
+					android:layout_marginTop="10dp"
+					android:text="@string/repo_url"
+					android:textColor="@color/colorPrimary"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content" />
+				<TextView
+					android:textColor="@color/colorAccent"
+					local:MvxBind="Text Item.Url"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"/>
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:text="@string/repo_language"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Summary.Language"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:text="@string/repo_stars"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Summary.StargazersCount"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:text="@string/repo_watchers"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Summary.WatchersCount"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:text="@string/repo_fork_count"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Summary.ForksCount"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+					<TextView
+						android:text="@string/repo_issue_count"
+						android:textColor="@color/colorPrimary"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content" />
+					<TextView
+						android:textColor="@color/colorAccent"
+						local:MvxBind="Text Summary.OpenIssuesCount"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

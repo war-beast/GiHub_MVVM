@@ -5420,73 +5420,79 @@ namespace GiHub_MVVM.Droid
 			public const int fragment_menuheader = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int git_item = 2130968620;
+			public const int fragment_settings = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_action = 2130968621;
+			public const int fragment_summary = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action_tombstone = 2130968622;
+			public const int git_item = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_media_action = 2130968623;
+			public const int notification_action = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_cancel_action = 2130968624;
+			public const int notification_action_tombstone = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media = 2130968625;
+			public const int notification_media_action = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_custom = 2130968626;
+			public const int notification_media_cancel_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_narrow = 2130968627;
+			public const int notification_template_big_media = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow_custom = 2130968628;
+			public const int notification_template_big_media_custom = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_custom_big = 2130968629;
+			public const int notification_template_big_media_narrow = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_icon_group = 2130968630;
+			public const int notification_template_big_media_narrow_custom = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_lines_media = 2130968631;
+			public const int notification_template_custom_big = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_media = 2130968632;
+			public const int notification_template_icon_group = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media_custom = 2130968633;
+			public const int notification_template_lines_media = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_part_chronometer = 2130968634;
+			public const int notification_template_media = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_time = 2130968635;
+			public const int notification_template_media_custom = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int select_dialog_item_material = 2130968636;
+			public const int notification_template_part_chronometer = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_multichoice_material = 2130968637;
+			public const int notification_template_part_time = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_singlechoice_material = 2130968638;
+			public const int select_dialog_item_material = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int SplashScreen = 2130968639;
+			public const int select_dialog_multichoice_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int support_simple_spinner_dropdown_item = 2130968640;
+			public const int select_dialog_singlechoice_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int toolbar_layout = 2130968641;
+			public const int SplashScreen = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int tooltip = 2130968642;
+			public const int support_simple_spinner_dropdown_item = 2130968642;
+			
+			// aapt resource value: 0x7f040043
+			public const int toolbar_layout = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int tooltip = 2130968644;
 			
 			static Layout()
 			{
@@ -5626,8 +5632,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f0c0010
 			public const int abc_toolbar_collapse_description = 2131492880;
 			
-			// aapt resource value: 0x7f0c0037
-			public const int api_loading_error = 2131492919;
+			// aapt resource value: 0x7f0c0038
+			public const int api_loading_error = 2131492920;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int app_name = 2131492906;
@@ -5647,14 +5653,14 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f0c0028
 			public const int drawer_open = 2131492904;
 			
-			// aapt resource value: 0x7f0c002d
-			public const int nav_exit = 2131492909;
-			
-			// aapt resource value: 0x7f0c002b
-			public const int nav_home = 2131492907;
+			// aapt resource value: 0x7f0c002e
+			public const int nav_exit = 2131492910;
 			
 			// aapt resource value: 0x7f0c002c
-			public const int nav_settings = 2131492908;
+			public const int nav_home = 2131492908;
+			
+			// aapt resource value: 0x7f0c002d
+			public const int nav_settings = 2131492909;
 			
 			// aapt resource value: 0x7f0c0021
 			public const int password_toggle_content_description = 2131492897;
@@ -5671,38 +5677,41 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f0c0025
 			public const int path_password_strike_through = 2131492901;
 			
-			// aapt resource value: 0x7f0c0035
-			public const int repo_fork_count = 2131492917;
-			
 			// aapt resource value: 0x7f0c0036
-			public const int repo_issue_count = 2131492918;
+			public const int repo_fork_count = 2131492918;
 			
-			// aapt resource value: 0x7f0c0032
-			public const int repo_language = 2131492914;
-			
-			// aapt resource value: 0x7f0c002e
-			public const int repo_name = 2131492910;
-			
-			// aapt resource value: 0x7f0c002f
-			public const int repo_owner = 2131492911;
-			
-			// aapt resource value: 0x7f0c0030
-			public const int repo_short_description = 2131492912;
+			// aapt resource value: 0x7f0c0037
+			public const int repo_issue_count = 2131492919;
 			
 			// aapt resource value: 0x7f0c0033
-			public const int repo_stars = 2131492915;
+			public const int repo_language = 2131492915;
+			
+			// aapt resource value: 0x7f0c002f
+			public const int repo_name = 2131492911;
+			
+			// aapt resource value: 0x7f0c0030
+			public const int repo_owner = 2131492912;
 			
 			// aapt resource value: 0x7f0c0031
-			public const int repo_url = 2131492913;
+			public const int repo_short_description = 2131492913;
 			
 			// aapt resource value: 0x7f0c0034
-			public const int repo_watchers = 2131492916;
+			public const int repo_stars = 2131492916;
+			
+			// aapt resource value: 0x7f0c0032
+			public const int repo_url = 2131492914;
+			
+			// aapt resource value: 0x7f0c0035
+			public const int repo_watchers = 2131492917;
 			
 			// aapt resource value: 0x7f0c0011
 			public const int search_menu_title = 2131492881;
 			
 			// aapt resource value: 0x7f0c0026
 			public const int status_bar_notification_info_overflow = 2131492902;
+			
+			// aapt resource value: 0x7f0c002b
+			public const int summary_title = 2131492907;
 			
 			static String()
 			{

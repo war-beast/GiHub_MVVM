@@ -28,15 +28,6 @@ namespace GiHub_MVVM.Droid.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-//#if DEBUG
-//            CrashManager.Register(this, Constants.HockeyAppAndroidDebug);
-//            MetricsManager.Register(Application, Constants.HockeyAppAndroidDebug);
-//            CheckForUpdates();
-//#else
-//            CrashManager.Register(this, Constants.HockeyAppAndroidProd);
-//            MetricsManager.Register(Application, Constants.HockeyAppAndroidProd);
-//#endif
-
             Drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             if (savedInstanceState == null)

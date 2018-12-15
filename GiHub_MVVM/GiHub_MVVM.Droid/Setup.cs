@@ -1,16 +1,11 @@
-using System.Collections.Generic;
-using System.Reflection;
 using Android.Content;
-using GiHub_MVVM.Droid.CustomBindings;
-using GiHub_MVVM.Droid.CustomViews;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Platform;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
-using MvvmCross.Platform;
-using MvvmCross.Platform.Droid.Platform;
 using MvvmCross.Platform.Platform;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace GiHub_MVVM.Droid
 {

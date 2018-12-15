@@ -1,19 +1,21 @@
-﻿using Android.Content.Res;
+﻿using System;
+using System.Windows.Input;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V7.Widget;
 using Android.Views;
+using GiHub_MVVM.Core.Models;
 using GiHub_MVVM.Core.ViewModels;
-using MvvmCross.Binding.Droid;
-using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Support.V4;
+using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
+using MvvmCross.Droid.Views;
 using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Platform;
 
 namespace GiHub_MVVM.Droid.Fragments
 {
     [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
-    [Register("gihub_mvvm.droid.fragments.HomeFragment")]
+    [Register(nameof(HomeFragment))]
     public class HomeFragment : BaseFragment<HomeViewModel>
     {
         protected override int FragmentId => Resource.Layout.fragment_home;
@@ -30,6 +32,10 @@ namespace GiHub_MVVM.Droid.Fragments
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
             ViewModel.Title = GetString(Resource.String.app_name);
 
+            //var presenter = (MvxAppCompatViewPresenter)Mvx.Resolve<IMvxAndroidViewPresenter>();
+            //var initialFragment = new HomeFragment { ViewModel = ViewModel };
+            //presenter.(FragmentManager, initialFragment);
+
             return view;
         }
 
@@ -39,7 +45,14 @@ namespace GiHub_MVVM.Droid.Fragments
             {
                 case "Items": swipeToRefresh.Refreshing = false;
                     break;
+                case "SelectedItem": SwitchFragments(ViewModel.SelectedItem);
+                    break;
             }
+        }
+
+        private void SwitchFragments(GitRepository itemSelected)
+        {
+            ViewModel.ShowSummaryCommand.Execute();
         }
     }
 }

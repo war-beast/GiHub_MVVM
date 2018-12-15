@@ -3,15 +3,46 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Localization;
 using MvvmCross.Platform;
 using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
+using GiHub_MVVM.Core.Models;
 
 namespace GiHub_MVVM.Core.ViewModels
 {
+    public class BaseViewModel<TRefObject> : BaseViewModel where TRefObject : class
+    {
+        public BaseViewModel(IMvxNavigationService navigationService) : base(navigationService)
+        {
+            
+        }
+
+        public void Prepare(TRefObject repository)
+        {
+            // first callback. Initialize parameter-agnostic stuff here
+            Item = repository;
+        }
+
+        private TRefObject _item;
+        public TRefObject Item
+        {
+            get
+            {
+                return _item;
+            }
+            set
+            {
+                SetProperty(ref _item, value);
+            }
+        }
+    }
+
     public class BaseViewModel : MvxViewModel
     {
         public IMvxTextProvider TextProvider { get; }
+        public readonly IMvxNavigationService _navigationService;
 
-        public BaseViewModel()
+        public BaseViewModel(IMvxNavigationService navigationService)
         {
+            _navigationService = navigationService;
             TextProvider = Mvx.Resolve<IMvxTextProvider>();
         }
 

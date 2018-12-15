@@ -4,19 +4,27 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using GiHub_MVVM.Core.Common;
 using GiHub_MVVM.Core.Models;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
 namespace GiHub_MVVM.Core.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        public HomeViewModel()
+        public HomeViewModel(IMvxNavigationService  navigationService) : base(navigationService)
         {
-            
+
+        }
+
+        private MvxAsyncCommand showSummaryCommand;
+        public IMvxAsyncCommand ShowSummaryCommand
+        {
+            get {
+                return showSummaryCommand = showSummaryCommand ?? new MvxAsyncCommand(async () => { await _navigationService.Navigate<SummaryViewModel, GitRepository>(SelectedItem); });
+            }
         }
 
         private MvxCommand closeViewCommand;
-
         public IMvxCommand CloseViewCommand
         {
             get
@@ -28,7 +36,7 @@ namespace GiHub_MVVM.Core.ViewModels
         public override async Task Initialize()
         {
             await base.Initialize();
-
+            //Загрузка данных при инициализации ViewModel
         }
 
         private List<GitRepository> _items;
@@ -58,13 +66,14 @@ namespace GiHub_MVVM.Core.ViewModels
                 return new MvxCommand<GitRepository>(item =>
                 {
                     SelectedItem = item;
+                    //Task.Run(async() => { await _navigationService.Navigate<SummaryViewModel, GitRepository>(SelectedItem); });
                 });
             }
         }
 
         public override async Task ReloadData()
         {
-            //await base.ReloadData();
+            await base.ReloadData();
             // By default return a completed Task
             //await Task.Delay(5000);
 

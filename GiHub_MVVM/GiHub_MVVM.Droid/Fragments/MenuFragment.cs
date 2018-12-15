@@ -12,7 +12,7 @@ using MvvmCross.Binding.Droid.BindingContext;
 namespace GiHub_MVVM.Droid.Fragments
 {
     [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame)]
-    [Register("gihub_mvvm.droid.fragments.MenuFragment")]
+    [Register(nameof(MenuFragment))]
     public class MenuFragment : BaseFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override int FragmentId => Resource.Layout.fragment_menu;
@@ -49,12 +49,15 @@ namespace GiHub_MVVM.Droid.Fragments
         private async Task Navigate(int itemId)
         {
             ((MainActivity)Activity).Drawer.CloseDrawers();
-            await Task.Delay(TimeSpan.FromMilliseconds(250));
+            await Task.Delay(TimeSpan.FromMilliseconds(50));
 
             switch (itemId)
             {
                 case Resource.Id.nav_home:
                     ViewModel.Navigate<HomeViewModel>();
+                    break;
+                case Resource.Id.nav_settings:
+                    ViewModel.Navigate<SettingsViewModel>();
                     break;
             }
         }

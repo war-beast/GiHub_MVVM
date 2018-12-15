@@ -48,8 +48,8 @@ namespace GiHub_MVVM.Droid.Fragments
 
         private async Task Navigate(int itemId)
         {
-            ((MainActivity)Activity).Drawer.CloseDrawers();
-            await Task.Delay(TimeSpan.FromMilliseconds(50));
+            ((MainActivity)Activity).Drawer.CloseDrawers();//Какая-то магия, дальше этой команды не срабатывает
+            await Task.Delay(TimeSpan.FromMilliseconds(250));
 
             switch (itemId)
             {

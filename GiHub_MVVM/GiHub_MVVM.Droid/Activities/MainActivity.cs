@@ -59,7 +59,7 @@ namespace GiHub_MVVM.Droid.Activities
             if (Drawer != null && Drawer.IsDrawerOpen(GravityCompat.Start))
                 Drawer.CloseDrawers();
             else
-                Finish();
+                base.OnBackPressed();
         }
 
         //private void CheckForUpdates()

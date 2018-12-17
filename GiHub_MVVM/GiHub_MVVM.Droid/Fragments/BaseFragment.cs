@@ -59,8 +59,8 @@ namespace GiHub_MVVM.Droid.Fragments
                     Resource.String.drawer_open, // "open drawer" description
                     Resource.String.drawer_close // "close drawer" description
                 );
-                _drawerToggle.DrawerOpened +=
-                    (object sender, ActionBarDrawerEventArgs e) => ParentActivity.HideSoftKeyboard();
+                //_drawerToggle.DrawerOpened +=
+                //    (object sender, ActionBarDrawerEventArgs e) => ParentActivity.HideSoftKeyboard();
                 (ParentActivity as INavigationActivity).Drawer.AddDrawerListener(_drawerToggle);
             }
 

@@ -11,15 +11,5 @@ namespace GiHub_MVVM.Core.ViewModels
         {
             ShowViewModel<MenuViewModel>();
         }
-
-        public void ShowHomeViewModel()
-        {
-            ShowViewModel<HomeViewModel>();
-        }
-
-        public void ShowSummaryViewModel()
-        {
-            ShowViewModel<SummaryViewModel>();
-        }
     }
 }

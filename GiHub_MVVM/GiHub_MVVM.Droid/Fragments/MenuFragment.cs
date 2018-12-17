@@ -8,10 +8,11 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using MvvmCross.Droid.Views.Attributes;
 using MvvmCross.Binding.Droid.BindingContext;
+using Android.Support.V4.Widget;
 
 namespace GiHub_MVVM.Droid.Fragments
 {
-    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame, false)]
     [Register(nameof(MenuFragment))]
     public class MenuFragment : BaseFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
@@ -19,6 +20,7 @@ namespace GiHub_MVVM.Droid.Fragments
 
         private NavigationView navigationView;
         private IMenuItem previousMenuItem;
+        private DrawerLayout drawer;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -28,6 +30,7 @@ namespace GiHub_MVVM.Droid.Fragments
             navigationView = view.FindViewById<NavigationView>(Resource.Id.navigation_view);
             navigationView.SetNavigationItemSelectedListener(this);
             navigationView.Menu.FindItem(Resource.Id.nav_home).SetChecked(true);
+            drawer = view.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             return view;
         }
@@ -39,7 +42,8 @@ namespace GiHub_MVVM.Droid.Fragments
             previousMenuItem?.SetChecked(false);
             previousMenuItem = item;
 
-            Task.Run(async () => {
+            Task.Run(async () =>
+            {
                 await Navigate(item.ItemId);
             });
 
@@ -48,18 +52,21 @@ namespace GiHub_MVVM.Droid.Fragments
 
         private async Task Navigate(int itemId)
         {
-            ((MainActivity)Activity).Drawer.CloseDrawers();//Какая-то магия, дальше этой команды не срабатывает
-            await Task.Delay(TimeSpan.FromMilliseconds(250));
+            var activity = ((MainActivity)Activity);
+            activity.RunOnUiThread(() =>
+            {
+                activity.Drawer.CloseDrawers();//Необходимо вызывать в потоке UI, иначе возникает исключение.
+            });
 
             switch (itemId)
             {
                 case Resource.Id.nav_home:
-                    ViewModel.Navigate<HomeViewModel>();
+                    await Task.Run(() => { ViewModel.Navigate<HomeViewModel>(); });
                     break;
                 case Resource.Id.nav_settings:
-                    ViewModel.Navigate<SettingsViewModel>();
+                    await Task.Run(() => { ViewModel.Navigate<SettingsViewModel>(); });
                     break;
             }
         }
-    }
+}
 }

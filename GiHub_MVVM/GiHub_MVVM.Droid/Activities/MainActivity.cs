@@ -60,6 +60,9 @@ namespace GiHub_MVVM.Droid.Activities
                 Drawer.CloseDrawers();
             else
                 base.OnBackPressed();
+
+            if (SupportFragmentManager.BackStackEntryCount == 0)
+                Finish();
         }
 
         //private void CheckForUpdates()

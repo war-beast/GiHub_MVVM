@@ -4661,8 +4661,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090039
 			public const int SYM = 2131296313;
 			
-			// aapt resource value: 0x7f0900a9
-			public const int action0 = 2131296425;
+			// aapt resource value: 0x7f0900aa
+			public const int action0 = 2131296426;
 			
 			// aapt resource value: 0x7f09007e
 			public const int action_bar = 2131296382;
@@ -4685,17 +4685,17 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09005c
 			public const int action_bar_title = 2131296348;
 			
-			// aapt resource value: 0x7f0900a6
-			public const int action_container = 2131296422;
+			// aapt resource value: 0x7f0900a7
+			public const int action_container = 2131296423;
 			
 			// aapt resource value: 0x7f09007f
 			public const int action_context_bar = 2131296383;
 			
-			// aapt resource value: 0x7f0900ad
-			public const int action_divider = 2131296429;
+			// aapt resource value: 0x7f0900ae
+			public const int action_divider = 2131296430;
 			
-			// aapt resource value: 0x7f0900a7
-			public const int action_image = 2131296423;
+			// aapt resource value: 0x7f0900a8
+			public const int action_image = 2131296424;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -4712,11 +4712,11 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09005e
 			public const int action_mode_close_button = 2131296350;
 			
-			// aapt resource value: 0x7f0900a8
-			public const int action_text = 2131296424;
+			// aapt resource value: 0x7f0900a9
+			public const int action_text = 2131296425;
 			
-			// aapt resource value: 0x7f0900b6
-			public const int actions = 2131296438;
+			// aapt resource value: 0x7f0900b7
+			public const int actions = 2131296439;
 			
 			// aapt resource value: 0x7f09005f
 			public const int activity_chooser_view_content = 2131296351;
@@ -4733,8 +4733,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09003a
 			public const int always = 2131296314;
 			
-			// aapt resource value: 0x7f0900b9
-			public const int appbar = 2131296441;
+			// aapt resource value: 0x7f0900ba
+			public const int appbar = 2131296442;
 			
 			// aapt resource value: 0x7f090058
 			public const int async = 2131296344;
@@ -4754,8 +4754,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090065
 			public const int buttonPanel = 2131296357;
 			
-			// aapt resource value: 0x7f0900aa
-			public const int cancel_action = 2131296426;
+			// aapt resource value: 0x7f0900ab
+			public const int cancel_action = 2131296427;
 			
 			// aapt resource value: 0x7f090047
 			public const int center = 2131296327;
@@ -4769,8 +4769,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090075
 			public const int checkbox = 2131296373;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int chronometer = 2131296434;
+			// aapt resource value: 0x7f0900b3
+			public const int chronometer = 2131296435;
 			
 			// aapt resource value: 0x7f090050
 			public const int clip_horizontal = 2131296336;
@@ -4826,14 +4826,17 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09008d
 			public const int drawer_layout = 2131296397;
 			
+			// aapt resource value: 0x7f0900a5
+			public const int editText1 = 2131296421;
+			
 			// aapt resource value: 0x7f090080
 			public const int edit_query = 2131296384;
 			
 			// aapt resource value: 0x7f090032
 			public const int end = 2131296306;
 			
-			// aapt resource value: 0x7f0900b8
-			public const int end_padder = 2131296440;
+			// aapt resource value: 0x7f0900b9
+			public const int end_padder = 2131296441;
 			
 			// aapt resource value: 0x7f090041
 			public const int enterAlways = 2131296321;
@@ -4880,8 +4883,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090064
 			public const int icon = 2131296356;
 			
-			// aapt resource value: 0x7f0900b7
-			public const int icon_group = 2131296439;
+			// aapt resource value: 0x7f0900b8
+			public const int icon_group = 2131296440;
 			
 			// aapt resource value: 0x7f09003c
 			public const int ifRoom = 2131296316;
@@ -4892,8 +4895,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f0900a3
 			public const int image_view_row_icon = 2131296419;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int info = 2131296435;
+			// aapt resource value: 0x7f0900b4
+			public const int info = 2131296436;
 			
 			// aapt resource value: 0x7f09005b
 			public const int italic = 2131296347;
@@ -4922,14 +4925,14 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09008e
 			public const int main_frame = 2131296398;
 			
-			// aapt resource value: 0x7f0900bd
-			public const int masked = 2131296445;
+			// aapt resource value: 0x7f0900be
+			public const int masked = 2131296446;
 			
-			// aapt resource value: 0x7f0900ac
-			public const int media_actions = 2131296428;
+			// aapt resource value: 0x7f0900ad
+			public const int media_actions = 2131296429;
 			
-			// aapt resource value: 0x7f0900bb
-			public const int message = 2131296443;
+			// aapt resource value: 0x7f0900bc
+			public const int message = 2131296444;
 			
 			// aapt resource value: 0x7f090033
 			public const int middle = 2131296307;
@@ -4943,29 +4946,29 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f0900a0
 			public const int my_recycler_view = 2131296416;
 			
-			// aapt resource value: 0x7f0900c0
-			public const int nav_example1 = 2131296448;
-			
 			// aapt resource value: 0x7f0900c1
-			public const int nav_example2 = 2131296449;
+			public const int nav_example1 = 2131296449;
 			
 			// aapt resource value: 0x7f0900c2
-			public const int nav_example3 = 2131296450;
+			public const int nav_example2 = 2131296450;
 			
 			// aapt resource value: 0x7f0900c3
-			public const int nav_footer = 2131296451;
-			
-			// aapt resource value: 0x7f0900c5
-			public const int nav_helpfeedback = 2131296453;
-			
-			// aapt resource value: 0x7f0900bf
-			public const int nav_home = 2131296447;
-			
-			// aapt resource value: 0x7f0900be
-			public const int nav_items = 2131296446;
+			public const int nav_example3 = 2131296451;
 			
 			// aapt resource value: 0x7f0900c4
-			public const int nav_settings = 2131296452;
+			public const int nav_footer = 2131296452;
+			
+			// aapt resource value: 0x7f0900c6
+			public const int nav_helpfeedback = 2131296454;
+			
+			// aapt resource value: 0x7f0900c0
+			public const int nav_home = 2131296448;
+			
+			// aapt resource value: 0x7f0900bf
+			public const int nav_items = 2131296447;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int nav_settings = 2131296453;
 			
 			// aapt resource value: 0x7f090090
 			public const int navigation_frame = 2131296400;
@@ -4985,14 +4988,14 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090020
 			public const int normal = 2131296288;
 			
-			// aapt resource value: 0x7f0900b5
-			public const int notification_background = 2131296437;
+			// aapt resource value: 0x7f0900b6
+			public const int notification_background = 2131296438;
+			
+			// aapt resource value: 0x7f0900b0
+			public const int notification_main_column = 2131296432;
 			
 			// aapt resource value: 0x7f0900af
-			public const int notification_main_column = 2131296431;
-			
-			// aapt resource value: 0x7f0900ae
-			public const int notification_main_column_container = 2131296430;
+			public const int notification_main_column_container = 2131296431;
 			
 			// aapt resource value: 0x7f09004e
 			public const int parallax = 2131296334;
@@ -5018,17 +5021,17 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09009f
 			public const int refresher = 2131296415;
 			
-			// aapt resource value: 0x7f0900a5
-			public const int repoCardLayout = 2131296421;
+			// aapt resource value: 0x7f0900a6
+			public const int repoCardLayout = 2131296422;
 			
 			// aapt resource value: 0x7f09004c
 			public const int right = 2131296332;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int right_icon = 2131296436;
+			// aapt resource value: 0x7f0900b5
+			public const int right_icon = 2131296437;
 			
-			// aapt resource value: 0x7f0900b0
-			public const int right_side = 2131296432;
+			// aapt resource value: 0x7f0900b1
+			public const int right_side = 2131296433;
 			
 			// aapt resource value: 0x7f09000c
 			public const int save_image_matrix = 2131296268;
@@ -5132,8 +5135,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f09004d
 			public const int start = 2131296333;
 			
-			// aapt resource value: 0x7f0900ab
-			public const int status_bar_latest_event_content = 2131296427;
+			// aapt resource value: 0x7f0900ac
+			public const int status_bar_latest_event_content = 2131296428;
 			
 			// aapt resource value: 0x7f090078
 			public const int submenuarrow = 2131296376;
@@ -5171,8 +5174,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090015
 			public const int textinput_error = 2131296277;
 			
-			// aapt resource value: 0x7f0900b1
-			public const int time = 2131296433;
+			// aapt resource value: 0x7f0900b2
+			public const int time = 2131296434;
 			
 			// aapt resource value: 0x7f09001c
 			public const int title = 2131296284;
@@ -5183,8 +5186,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090071
 			public const int title_template = 2131296369;
 			
-			// aapt resource value: 0x7f0900ba
-			public const int toolbar = 2131296442;
+			// aapt resource value: 0x7f0900bb
+			public const int toolbar = 2131296443;
 			
 			// aapt resource value: 0x7f090040
 			public const int top = 2131296320;
@@ -5222,8 +5225,8 @@ namespace GiHub_MVVM.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900bc
-			public const int visible = 2131296444;
+			// aapt resource value: 0x7f0900bd
+			public const int visible = 2131296445;
 			
 			// aapt resource value: 0x7f09003e
 			public const int withText = 2131296318;

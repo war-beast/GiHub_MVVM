@@ -32,6 +32,18 @@ namespace GiHub_MVVM.Droid.Activities
 
             if (savedInstanceState == null)
                 ViewModel.ShowMenu();
+
+            Drawer.DrawerOpened += Drawer_DrawerOpened;
+        }
+
+        private void Drawer_DrawerOpened(object sender, DrawerLayout.DrawerOpenedEventArgs e)
+        {
+            if (CurrentFocus == null) return;
+
+            InputMethodManager inputMethodManager = (InputMethodManager)this.GetSystemService(Android.Content.Context.InputMethodService);
+            inputMethodManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, 0);
+
+            CurrentFocus.ClearFocus();
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -61,6 +73,7 @@ namespace GiHub_MVVM.Droid.Activities
             else
                 base.OnBackPressed();
 
+            //При нажатии кнопки "назад" на последнем фрагменте в бекстеке происходит переход на фрагмент бокового меню вместо закрытия. Поэтому при отсутствии в бекстеке фрагментов с рабочими экранами вызывается принудительное завершение приложения.
             if (SupportFragmentManager.BackStackEntryCount == 0)
                 Finish();
         }

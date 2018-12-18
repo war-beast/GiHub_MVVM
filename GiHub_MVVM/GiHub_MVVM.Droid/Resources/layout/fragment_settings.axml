@@ -6,15 +6,36 @@
     android:layout_height="match_parent">
     <include
         layout="@layout/toolbar_layout" />
-	<TextView
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		local:MvxBind="Text Title"/>
-	<EditText
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/editText1" />
+	<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+		android:padding="@dimen/margin_small"
+    android:orientation="horizontal" >
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+			<TextView
+			android:textColor="@color/colorPrimary"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minLines="1"
+			android:singleLine="false"
+			android:text="Количество первых репозиториев" />
+		</RelativeLayout>
+		<EditText
+			android:layout_weight="1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			local:MvxBind="Text RepoCount"
+			android:id="@+id/editText1"
+			android:inputType="none|number" />
+	</LinearLayout>
+		<Button 
+			android:textColor="@color/colorAccent"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Сохранить"
+			local:MvxBind="Click RepoCountSave" />
 </LinearLayout>

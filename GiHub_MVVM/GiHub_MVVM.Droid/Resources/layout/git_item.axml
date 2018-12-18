@@ -10,10 +10,10 @@
         card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true"
         card_view:cardCornerRadius="1dp"
-        card_view:contentPaddingLeft="10dp"
-        card_view:contentPaddingRight="10dp"
-        card_view:contentPaddingTop="14dp"
-        card_view:contentPaddingBottom="18dp">
+        card_view:contentPaddingLeft="@dimen/margin_small"
+        card_view:contentPaddingRight="@dimen/margin_small"
+        card_view:contentPaddingTop="@dimen/margin_medium"
+        card_view:contentPaddingBottom="@dimen/margin_medium">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

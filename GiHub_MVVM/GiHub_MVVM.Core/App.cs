@@ -4,6 +4,7 @@ using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross.Plugins.JsonLocalization;
 using GiHub_MVVM.Core.Helpers;
+using GiHub_MVVM.Core.Services;
 
 namespace GiHub_MVVM.Core
 {

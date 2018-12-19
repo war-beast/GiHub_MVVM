@@ -1,10 +1,12 @@
+using Android.App;
+using Android.Content;
+using Android.Preferences;
+using GiHub_MVVM.Core.Helpers;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Localization;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross.Plugins.JsonLocalization;
-using GiHub_MVVM.Core.Helpers;
-using GiHub_MVVM.Core.Services;
 
 namespace GiHub_MVVM.Core
 {
@@ -25,6 +27,9 @@ namespace GiHub_MVVM.Core
             // Construct custom application start object
             Mvx.ConstructAndRegisterSingleton<IMvxAppStart, AppStart>();
             var appStart = Mvx.Resolve<IMvxAppStart>();
+
+            ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(Application.Context);
+            Mvx.RegisterSingleton<ISharedPreferences>(sharedPreferences);
 
             // register the appstart object
             RegisterAppStart(appStart);

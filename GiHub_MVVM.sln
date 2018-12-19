@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiHub_MVVM.Droid", "GiHub_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiHub_MVVM.Core", "GiHub_MVVM\GiHub_MVVM.Core\GiHub_MVVM.Core.csproj", "{31D7792C-8339-4C32-8C91-123C9B248B83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{57922489-9164-4982-BC7D-CDDFC07F01F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{31D7792C-8339-4C32-8C91-123C9B248B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31D7792C-8339-4C32-8C91-123C9B248B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D7792C-8339-4C32-8C91-123C9B248B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57922489-9164-4982-BC7D-CDDFC07F01F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57922489-9164-4982-BC7D-CDDFC07F01F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57922489-9164-4982-BC7D-CDDFC07F01F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57922489-9164-4982-BC7D-CDDFC07F01F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

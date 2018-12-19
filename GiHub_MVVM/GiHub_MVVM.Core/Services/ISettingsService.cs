@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GiHub_MVVM.Core.Services
 {
-    interface ISettingsService
+    public interface ISettingsService
     {
         void SetListCount(int count);
         int GetListCount();

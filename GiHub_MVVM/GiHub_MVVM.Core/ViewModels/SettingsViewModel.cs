@@ -18,6 +18,8 @@ namespace GiHub_MVVM.Core.ViewModels
         public SettingsViewModel(IMvxNavigationService navigationService) : base(navigationService)
         {
             settingsService = Mvx.Resolve<ISettingsService>();
+
+            RepoCount = settingsService.GetListCount();
         }
 
         private int _repoCount;
@@ -47,7 +49,6 @@ namespace GiHub_MVVM.Core.ViewModels
         public override async Task Initialize()
         {
             await base.Initialize();
-            RepoCount = settingsService.GetListCount();
         }
     }
 }

@@ -19,50 +19,54 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
 			android:id="@+id/repoCardLayout">
-			<LinearLayout
+			<RelativeLayout
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:weightSum="10">
-				<LinearLayout
-					android:orientation="vertical"
-					android:layout_weight="5"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
+				android:layout_height="wrap_content">		
+					<Mvx.MvxImageView
+						android:layout_width="100dp"
+						android:id="@+id/ava"
+						android:layout_height="100dp"
+						android:layout_alignParentRight="true"
+						android:layout_alignParentTop="true"
+						android:scaleType="centerInside"
+						local:MvxBind="ImageUrl Owner.AvatarUrl" />
 					<TextView 
+					android:id="@+id/line1"
+					android:layout_toLeftOf="@id/ava"
+					android:layout_alignParentLeft="true"
 						android:text="@string/repo_name"
 						android:textColor="@color/colorPrimary"
 						android:layout_height="wrap_content"
-						android:layout_width="wrap_content" />
+						android:layout_width="fill_parent"
+					android:layout_alignParentTop="true" />
 					<TextView 
+					android:id="@+id/line2"
+					android:layout_toLeftOf="@id/ava"
+					android:layout_below="@id/line1"
+					android:layout_alignParentLeft="true"
 						android:textColor="@color/colorAccent"
 						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
+						android:layout_width="fill_parent"
 						local:MvxBind="Text Name"/>                
 					<TextView 
+					android:id="@+id/line3"
+					android:layout_toLeftOf="@id/ava"
+					android:layout_below="@id/line2"
+					android:layout_alignParentLeft="true"
 						android:text="@string/repo_owner"
 						android:textColor="@color/colorPrimary"
 						android:layout_height="wrap_content"
-						android:layout_width="wrap_content" />
+						android:layout_width="fill_parent" />
 					<TextView 
+					android:id="@+id/line4"
+					android:layout_toLeftOf="@id/ava"
+					android:layout_below="@id/line3"
+					android:layout_alignParentLeft="true"
 						android:textColor="@color/colorAccent"
 						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
+						android:layout_width="fill_parent"
 						local:MvxBind="Text Owner.Login"/>
-				</LinearLayout>
-				<LinearLayout
-					android:orientation="vertical"
-					android:layout_weight="5"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
-					<Mvx.MvxImageView
-						android:layout_width="match_parent"
-						android:layout_height="70dp"
-						android:layout_alignParentRight="true"
-						local:MvxBind="ImageUrl Owner.AvatarUrl"
-						android:scaleType="centerInside" />
-				</LinearLayout>
-			</LinearLayout>
+			</RelativeLayout>
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"

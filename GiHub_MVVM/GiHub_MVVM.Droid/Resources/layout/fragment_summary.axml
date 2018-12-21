@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,15 +15,15 @@
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
 			android:layout_margin="4dp">
-			<LinearLayout
+			<android.support.v7.widget.GridLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:weightSum="10">
+				app:columnCount="2">
 				<LinearLayout
 					android:orientation="vertical"
-					android:layout_weight="5"
-					android:layout_width="match_parent"
+					app:layout_columnWeight="1"
+					android:layout_width="0dp"
+					android:adjustViewBounds="true"
 					android:layout_height="wrap_content">
 					<TextView
 						android:text="@string/repo_name"
@@ -46,19 +47,14 @@
 						android:layout_height="wrap_content"
 						android:layout_width="wrap_content"/>
 				</LinearLayout>
-				<LinearLayout
-					android:orientation="vertical"
-					android:layout_weight="5"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
 					<Mvx.MvxImageView
-						android:layout_width="match_parent"
-						android:layout_height="70dp"
-						android:layout_alignParentRight="true"
-						local:MvxBind="ImageUrl Item.Owner.AvatarUrl"
-						android:scaleType="centerInside" />
-				</LinearLayout>
-			</LinearLayout>
+						app:layout_columnWeight="1"
+						app:layout_gravity="fill"
+						android:layout_width="0dp"
+						android:adjustViewBounds="true"
+						android:layout_height="match_parent"
+						local:MvxBind="ImageUrl Item.Owner.AvatarUrl" />
+			</android.support.v7.widget.GridLayout>
 			<LinearLayout
 				android:layout_marginTop="10dp"
 				android:layout_width="match_parent"
